@@ -37,3 +37,4 @@
   roles:
     - { role: ansible-role-chrome }
     - { role: ansible-role-sublimetext }
+    - { role: ansible-role-docker }
