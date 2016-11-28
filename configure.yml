@@ -24,6 +24,7 @@
     - name: install nodejs
       apt: name=nodejs state=latest
 
+
    # - name: add mongodb public key
    #   apt_key: keyserver=keyserver.ubuntu.com id=EA312927
 
@@ -32,6 +33,7 @@
 
    # - name: install mongodb
    #   apt: name=mongodb-org state=latest update_cache=yes
-  
+
   roles:
-    - { role: ansible-role-chrome, become: yes }
+    - { role: ansible-role-chrome }
+    - { role: ansible-role-sublimetext }
