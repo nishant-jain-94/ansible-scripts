@@ -24,6 +24,17 @@
     - name: install nodejs
       apt: name=nodejs state=latest
 
+    - name: installing oh-my-zsh
+      apt: name=zsh state=latest
+
+    - name: installing git-core
+      apt: name=git-core state=latest
+
+    - name: install zsh
+      command: wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+
+    - name: change the shell to zsh
+      command: chsh -s `which zsh`
 
    # - name: add mongodb public key
    #   apt_key: keyserver=keyserver.ubuntu.com id=EA312927
